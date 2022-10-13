@@ -1,4 +1,5 @@
 import express from "express";
+import cors from "cors";
 import * as dotenv from "dotenv";
 import entity from "./routes/entity";
 import "./database";
@@ -6,6 +7,8 @@ import "./database";
 export const app = express();
 
 dotenv.config();
+
+app.use(cors());
 
 app.use(express.json());
 
